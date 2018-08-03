@@ -1,3 +1,3 @@
 # README #
 
-* [Manual de despliegue](https://repo.tda.ad/TNavarro/TestADFBC/blob/master/Manual.pdf)
+* [Manual de despliegue](https://github.com/tomasnama/TestADFBC/blob/master/Manual.pdf)
