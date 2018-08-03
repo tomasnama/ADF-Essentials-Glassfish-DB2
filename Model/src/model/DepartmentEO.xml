@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="DepartmentEO"
+  Version="12.2.1.9.14"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="DEPARTMENT"
+  AliasName="DepartmentEO"
+  BindingStyle="JDBC">
+  <Attribute
+    Name="Deptno"
+    IsNotNull="true"
+    Precision="3"
+    ColumnName="DEPTNO"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="CHAR"
+    TableName="DEPARTMENT"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="3"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Deptname"
+    IsNotNull="true"
+    Precision="36"
+    ColumnName="DEPTNAME"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR"
+    TableName="DEPARTMENT">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="36"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Mgrno"
+    Precision="6"
+    ColumnName="MGRNO"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="CHAR"
+    TableName="DEPARTMENT">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="6"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Admrdept"
+    IsNotNull="true"
+    Precision="3"
+    ColumnName="ADMRDEPT"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="CHAR"
+    TableName="DEPARTMENT">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="3"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Location"
+    Precision="16"
+    ColumnName="LOCATION"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="CHAR"
+    TableName="DEPARTMENT">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="16"/>
+    </DesignTime>
+  </Attribute>
+  <AccessorAttribute
+    Name="DepartmentEO"
+    Association="model.RodAssoc"
+    AssociationEnd="model.RodAssoc.DepartmentEO"
+    AssociationOtherEnd="model.RodAssoc.AdmrdeptDepartmentEO"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="AdmrdeptDepartmentEO"
+    Association="model.RodAssoc"
+    AssociationEnd="model.RodAssoc.AdmrdeptDepartmentEO"
+    AssociationOtherEnd="model.RodAssoc.DepartmentEO"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="EmployeeEO"
+    Association="model.RedAssoc"
+    AssociationEnd="model.RedAssoc.EmployeeEO"
+    AssociationOtherEnd="model.RedAssoc.DepartmentEO"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="EmployeeEO1"
+    Association="model.RdeAssoc"
+    AssociationEnd="model.RdeAssoc.EmployeeEO1"
+    AssociationOtherEnd="model.RdeAssoc.DepartmentEO1"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <Key
+    Name="PkDepartment"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="PK_DEPARTMENT"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.DepartmentEO.Deptno"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="Rde">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="PK_EMPLOYEE"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="RDE"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.DepartmentEO.Mgrno"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="Rod">
+    <DesignTime>
+      <Attr Name="_isCascadeDelete" Value="true"/>
+      <Attr Name="_referencedKey" Value="PK_DEPARTMENT"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="ROD"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.DepartmentEO.Admrdept"/>
+    </AttrArray>
+  </Key>
+</Entity>

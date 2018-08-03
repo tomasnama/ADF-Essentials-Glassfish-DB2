@@ -1,0 +1,27 @@
+<References xmlns="http://xmlns.oracle.com/adf/jndi">
+  <Reference name="Connection1" className="oracle.jdeveloper.db.adapter.DatabaseProvider"
+             credentialStoreKey="Connection1" xmlns="">
+    <Factory className="oracle.jdevimpl.db.adapter.DatabaseProviderFactory1212"/>
+    <RefAddresses>
+      <StringRefAddr addrType="hostname">
+        <Contents>localhost</Contents>
+      </StringRefAddr>
+      <SecureRefAddr addrType="password"/>
+      <StringRefAddr addrType="driver">
+        <Contents>weblogic.jdbc.db2.DB2Driver</Contents>
+      </StringRefAddr>
+      <StringRefAddr addrType="subtype">
+        <Contents>DB2</Contents>
+      </StringRefAddr>
+      <StringRefAddr addrType="port">
+        <Contents>50000</Contents>
+      </StringRefAddr>
+      <StringRefAddr addrType="user">
+        <Contents>db2inst1</Contents>
+      </StringRefAddr>
+      <StringRefAddr addrType="dataSourceName">
+        <Contents>SAMPLE</Contents>
+      </StringRefAddr>
+    </RefAddresses>
+  </Reference>
+</References>

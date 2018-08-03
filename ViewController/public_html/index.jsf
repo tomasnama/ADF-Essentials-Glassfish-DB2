@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:document title="index.jsf" id="d1">
+        <af:form id="f1">
+            <af:panelSplitter orientation="horizontal" splitterPosition="100" id="ps1">
+                <f:facet name="first"/>
+                <f:facet name="second">
+                    <af:panelGroupLayout id="pgl2" layout="horizontal" halign="center" valign="middle" inlineStyle="width: 90%">
+                        <af:panelGroupLayout id="pgl1" layout="vertical" halign="center" valign="middle">
+                            <af:spacer width="100%" height="25px"/>
+                            <af:link text="Employees" id="l1" icon="/img/employee.png" action="list"/>
+                        </af:panelGroupLayout>
+                    </af:panelGroupLayout>
+                </f:facet>
+            </af:panelSplitter>
+        </af:form>
+    </af:document>
+</f:view>

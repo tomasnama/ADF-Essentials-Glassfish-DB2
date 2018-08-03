@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.9.14" id="editPageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="EmployeeEOView1" RangeSize="25" DataControl="AppModuleDataControl" id="EmployeeEOView1Iterator"/>
+  </executables>
+  <bindings>
+    <attributeValues IterBinding="EmployeeEOView1Iterator" id="Empno">
+      <AttrNames>
+        <Item Value="Empno"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="EmployeeEOView1Iterator" id="Firstnme">
+      <AttrNames>
+        <Item Value="Firstnme"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="EmployeeEOView1Iterator" id="Midinit">
+      <AttrNames>
+        <Item Value="Midinit"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="EmployeeEOView1Iterator" id="Lastname">
+      <AttrNames>
+        <Item Value="Lastname"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="EmployeeEOView1Iterator" id="Workdept">
+      <AttrNames>
+        <Item Value="Workdept"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="EmployeeEOView1Iterator" id="Phoneno">
+      <AttrNames>
+        <Item Value="Phoneno"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="EmployeeEOView1Iterator" id="Hiredate">
+      <AttrNames>
+        <Item Value="Hiredate"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="EmployeeEOView1Iterator" id="Job">
+      <AttrNames>
+        <Item Value="Job"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="EmployeeEOView1Iterator" id="Edlevel">
+      <AttrNames>
+        <Item Value="Edlevel"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="EmployeeEOView1Iterator" id="Sex">
+      <AttrNames>
+        <Item Value="Sex"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="EmployeeEOView1Iterator" id="Birthdate">
+      <AttrNames>
+        <Item Value="Birthdate"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="EmployeeEOView1Iterator" id="Salary">
+      <AttrNames>
+        <Item Value="Salary"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="EmployeeEOView1Iterator" id="Bonus">
+      <AttrNames>
+        <Item Value="Bonus"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="EmployeeEOView1Iterator" id="Comm">
+      <AttrNames>
+        <Item Value="Comm"/>
+      </AttrNames>
+    </attributeValues>
+    <action IterBinding="EmployeeEOView1Iterator" id="First" RequiresUpdateModel="true" Action="first"/>
+    <action IterBinding="EmployeeEOView1Iterator" id="Previous" RequiresUpdateModel="true" Action="previous"/>
+    <action IterBinding="EmployeeEOView1Iterator" id="Next" RequiresUpdateModel="true" Action="next"/>
+    <action IterBinding="EmployeeEOView1Iterator" id="Last" RequiresUpdateModel="true" Action="last"/>
+    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl"/>
+    <action id="Rollback" RequiresUpdateModel="false" Action="rollbackTransaction" DataControl="AppModuleDataControl"/>
+  </bindings>
+</pageDefinition>

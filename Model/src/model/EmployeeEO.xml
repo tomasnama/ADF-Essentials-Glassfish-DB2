@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="EmployeeEO"
+  Version="12.2.1.9.14"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="EMPLOYEE"
+  AliasName="EmployeeEO"
+  BindingStyle="JDBC">
+  <Attribute
+    Name="Empno"
+    IsNotNull="true"
+    Precision="6"
+    ColumnName="EMPNO"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="CHAR"
+    TableName="EMPLOYEE"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="6"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Firstnme"
+    IsNotNull="true"
+    Precision="12"
+    ColumnName="FIRSTNME"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR"
+    TableName="EMPLOYEE">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="12"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Midinit"
+    Precision="1"
+    ColumnName="MIDINIT"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="CHAR"
+    TableName="EMPLOYEE">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="1"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Lastname"
+    IsNotNull="true"
+    Precision="15"
+    ColumnName="LASTNAME"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR"
+    TableName="EMPLOYEE">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="15"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Workdept"
+    Precision="3"
+    ColumnName="WORKDEPT"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="CHAR"
+    TableName="EMPLOYEE">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="3"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Phoneno"
+    Precision="4"
+    ColumnName="PHONENO"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="CHAR"
+    TableName="EMPLOYEE">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="4"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Hiredate"
+    ColumnName="HIREDATE"
+    SQLType="DATE"
+    Type="java.sql.Date"
+    ColumnType="DATE"
+    TableName="EMPLOYEE"/>
+  <Attribute
+    Name="Job"
+    Precision="8"
+    ColumnName="JOB"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="CHAR"
+    TableName="EMPLOYEE">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="8"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Edlevel"
+    IsNotNull="true"
+    ColumnName="EDLEVEL"
+    SQLType="SMALLINT"
+    Type="java.lang.Integer"
+    ColumnType="SMALLINT"
+    TableName="EMPLOYEE"/>
+  <Attribute
+    Name="Sex"
+    Precision="1"
+    ColumnName="SEX"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="CHAR"
+    TableName="EMPLOYEE">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="1"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Birthdate"
+    ColumnName="BIRTHDATE"
+    SQLType="DATE"
+    Type="java.sql.Date"
+    ColumnType="DATE"
+    TableName="EMPLOYEE"/>
+  <Attribute
+    Name="Salary"
+    Precision="9"
+    Scale="2"
+    ColumnName="SALARY"
+    SQLType="DECIMAL"
+    Type="java.math.BigDecimal"
+    ColumnType="DECIMAL"
+    TableName="EMPLOYEE"/>
+  <Attribute
+    Name="Bonus"
+    Precision="9"
+    Scale="2"
+    ColumnName="BONUS"
+    SQLType="DECIMAL"
+    Type="java.math.BigDecimal"
+    ColumnType="DECIMAL"
+    TableName="EMPLOYEE"/>
+  <Attribute
+    Name="Comm"
+    Precision="9"
+    Scale="2"
+    ColumnName="COMM"
+    SQLType="DECIMAL"
+    Type="java.math.BigDecimal"
+    ColumnType="DECIMAL"
+    TableName="EMPLOYEE"/>
+  <AccessorAttribute
+    Name="DepartmentEO"
+    Association="model.RedAssoc"
+    AssociationEnd="model.RedAssoc.DepartmentEO"
+    AssociationOtherEnd="model.RedAssoc.EmployeeEO"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="DepartmentEO1"
+    Association="model.RdeAssoc"
+    AssociationEnd="model.RdeAssoc.DepartmentEO1"
+    AssociationOtherEnd="model.RdeAssoc.EmployeeEO1"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <Key
+    Name="PkEmployee"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="PK_EMPLOYEE"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.EmployeeEO.Empno"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="Red">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="PK_DEPARTMENT"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="RED"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.EmployeeEO.Workdept"/>
+    </AttrArray>
+  </Key>
+</Entity>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.9.14" id="departamentPageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="DepartmentEOView1" RangeSize="25" DataControl="AppModuleDataControl"
+              id="DepartmentEOView1Iterator"/>
+    <iterator Binds="EmployeeEOView2" RangeSize="25" DataControl="AppModuleDataControl" id="EmployeeEOView2Iterator"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="DepartmentEOView1Iterator" id="DepartmentEOView1">
+      <nodeDefinition DefName="model.DepartmentEOView" Name="DepartmentEOView10">
+        <AttrNames>
+          <Item Value="Deptno"/>
+          <Item Value="Deptname"/>
+          <Item Value="Mgrno"/>
+          <Item Value="Admrdept"/>
+          <Item Value="Location"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="EmployeeEOView2Iterator" id="EmployeeEOView2">
+      <nodeDefinition DefName="model.EmployeeEOView" Name="EmployeeEOView20">
+        <AttrNames>
+          <Item Value="Empno"/>
+          <Item Value="Firstnme"/>
+          <Item Value="Midinit"/>
+          <Item Value="Lastname"/>
+          <Item Value="Workdept"/>
+          <Item Value="Phoneno"/>
+          <Item Value="Hiredate"/>
+          <Item Value="Job"/>
+          <Item Value="Edlevel"/>
+          <Item Value="Sex"/>
+          <Item Value="Birthdate"/>
+          <Item Value="Salary"/>
+          <Item Value="Bonus"/>
+          <Item Value="Comm"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>

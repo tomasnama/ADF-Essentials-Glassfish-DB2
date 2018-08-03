@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+        xmlns:dvt="http://xmlns.oracle.com/dss/adf/faces">
+    <af:document title="graph.jsf" id="d1">
+        <af:messages id="m1"/>
+        <af:form id="f1">
+            <af:panelSplitter orientation="horizontal" splitterPosition="100" id="ps1">
+                <f:facet name="first">
+                    <af:panelGroupLayout id="pgl1" layout="vertical" halign="center" valign="middle">
+                        <af:spacer width="100%" height="15px" id="s1"/>
+                        <af:link text="Volver" id="l2" icon="/img/left-arrow-key.png" action="volver"/>
+                    </af:panelGroupLayout>
+                </f:facet>
+                <f:facet name="second">
+                    <dvt:barChart selectionListener="#{bindings.EmployeeEOView1.collectionModel.makeCurrent}"
+                                  dataSelection="single" id="barChart1" var="row"
+                                  value="#{bindings.EmployeeEOView1.collectionModel}">
+                        <dvt:chartLegend id="cl1"/>
+                        <f:facet name="dataStamp">
+                            <dvt:chartDataItem id="di1" series="#{bindings.EmployeeEOView1.hints.Salary.label}"
+                                               value="#{row.Salary}" group="#{row.Firstnme}"/>
+                        </f:facet>
+                    </dvt:barChart>
+                </f:facet>
+            </af:panelSplitter>
+        </af:form>
+    </af:document>
+</f:view>

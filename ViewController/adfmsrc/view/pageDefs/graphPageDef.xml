@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.9.14" id="graphPageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="EmployeeEOView1" RangeSize="-1" DataControl="AppModuleDataControl" id="EmployeeEOView1Iterator"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="EmployeeEOView1Iterator" id="EmployeeEOView1" ChangeEventPolicy="ppr">
+      <nodeDefinition DefName="model.EmployeeEOView" Name="EmployeeEOView1">
+        <AttrNames>
+          <Item Value="Salary"/>
+          <Item Value="Firstnme"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>

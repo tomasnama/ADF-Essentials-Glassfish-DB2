@@ -1,0 +1,202 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:document title="departament.jsf" id="d1">
+        <af:messages id="m1"/>
+        <af:form id="f1">
+            <af:panelSplitter orientation="horizontal" splitterPosition="100" id="ps1">
+                <f:facet name="first">
+                    <af:panelGroupLayout id="pgl1" layout="vertical" halign="center" valign="middle">
+                        <af:spacer width="100%" height="15px" id="s1"/>
+                        <af:link text="Volver" id="l2" icon="/img/left-arrow-key.png" action="volver"/>
+                    </af:panelGroupLayout>
+                </f:facet>
+                <f:facet name="second">
+                    <af:panelGroupLayout id="pgl2">
+                        <af:panelHeader text="DepartmentEOView1" id="ph1">
+                            <af:panelCollection id="pc1">
+                                <f:facet name="menus"/>
+                                <f:facet name="toolbar"></f:facet>
+                                <f:facet name="statusbar"/>
+                                <af:table id="md1" rows="#{bindings.DepartmentEOView1.rangeSize}"
+                                          fetchSize="#{bindings.DepartmentEOView1.rangeSize}"
+                                          emptyText="#{bindings.DepartmentEOView1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                          var="row" value="#{bindings.DepartmentEOView1.collectionModel}"
+                                          rowBandingInterval="0"
+                                          selectedRowKeys="#{bindings.DepartmentEOView1.collectionModel.selectedRow}"
+                                          selectionListener="#{bindings.DepartmentEOView1.collectionModel.makeCurrent}"
+                                          rowSelection="single">
+                                    <af:column headerText="#{bindings.DepartmentEOView1.hints.Deptno.label}"
+                                               sortProperty="#{bindings.DepartmentEOView1.hints.Deptno.name}"
+                                               sortable="false" id="c1">
+                                        <af:outputText value="#{row.Deptno}"
+                                                       shortDesc="#{bindings.DepartmentEOView1.hints.Deptno.tooltip}"
+                                                       id="ot1"/>
+                                    </af:column>
+                                    <af:column headerText="#{bindings.DepartmentEOView1.hints.Deptname.label}"
+                                               sortProperty="#{bindings.DepartmentEOView1.hints.Deptname.name}"
+                                               sortable="false" id="c2">
+                                        <af:outputText value="#{row.Deptname}"
+                                                       shortDesc="#{bindings.DepartmentEOView1.hints.Deptname.tooltip}"
+                                                       id="ot2"/>
+                                    </af:column>
+                                    <af:column headerText="#{bindings.DepartmentEOView1.hints.Mgrno.label}"
+                                               sortProperty="#{bindings.DepartmentEOView1.hints.Mgrno.name}"
+                                               sortable="false" id="c3">
+                                        <af:outputText value="#{row.Mgrno}"
+                                                       shortDesc="#{bindings.DepartmentEOView1.hints.Mgrno.tooltip}"
+                                                       id="ot3"/>
+                                    </af:column>
+                                    <af:column headerText="#{bindings.DepartmentEOView1.hints.Admrdept.label}"
+                                               sortProperty="#{bindings.DepartmentEOView1.hints.Admrdept.name}"
+                                               sortable="false" id="c4">
+                                        <af:outputText value="#{row.Admrdept}"
+                                                       shortDesc="#{bindings.DepartmentEOView1.hints.Admrdept.tooltip}"
+                                                       id="ot4"/>
+                                    </af:column>
+                                    <af:column headerText="#{bindings.DepartmentEOView1.hints.Location.label}"
+                                               sortProperty="#{bindings.DepartmentEOView1.hints.Location.name}"
+                                               sortable="false" id="c5">
+                                        <af:outputText value="#{row.Location}"
+                                                       shortDesc="#{bindings.DepartmentEOView1.hints.Location.tooltip}"
+                                                       id="ot5"/>
+                                    </af:column>
+                                </af:table>
+                            </af:panelCollection>
+                        </af:panelHeader>
+                        <af:panelHeader text="EmployeeEOView2" id="ph2">
+                            <af:panelCollection id="pc2">
+                                <f:facet name="menus"/>
+                                <f:facet name="toolbar"></f:facet>
+                                <f:facet name="statusbar"/>
+                                <af:table rows="#{bindings.EmployeeEOView2.rangeSize}"
+                                          fetchSize="#{bindings.EmployeeEOView2.rangeSize}"
+                                          emptyText="#{bindings.EmployeeEOView2.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                          var="row" value="#{bindings.EmployeeEOView2.collectionModel}"
+                                          rowBandingInterval="0"
+                                          selectedRowKeys="#{bindings.EmployeeEOView2.collectionModel.selectedRow}"
+                                          selectionListener="#{bindings.EmployeeEOView2.collectionModel.makeCurrent}"
+                                          rowSelection="single" id="t1">
+                                    <af:column headerText="#{bindings.EmployeeEOView2.hints.Empno.label}"
+                                               sortProperty="#{bindings.EmployeeEOView2.hints.Empno.name}"
+                                               sortable="false" id="c6">
+                                        <af:outputText value="#{row.Empno}"
+                                                       shortDesc="#{bindings.EmployeeEOView2.hints.Empno.tooltip}"
+                                                       id="ot6"/>
+                                    </af:column>
+                                    <af:column headerText="#{bindings.EmployeeEOView2.hints.Firstnme.label}"
+                                               sortProperty="#{bindings.EmployeeEOView2.hints.Firstnme.name}"
+                                               sortable="false" id="c7">
+                                        <af:outputText value="#{row.Firstnme}"
+                                                       shortDesc="#{bindings.EmployeeEOView2.hints.Firstnme.tooltip}"
+                                                       id="ot7"/>
+                                    </af:column>
+                                    <af:column headerText="#{bindings.EmployeeEOView2.hints.Midinit.label}"
+                                               sortProperty="#{bindings.EmployeeEOView2.hints.Midinit.name}"
+                                               sortable="false" id="c8">
+                                        <af:outputText value="#{row.Midinit}"
+                                                       shortDesc="#{bindings.EmployeeEOView2.hints.Midinit.tooltip}"
+                                                       id="ot8"/>
+                                    </af:column>
+                                    <af:column headerText="#{bindings.EmployeeEOView2.hints.Lastname.label}"
+                                               sortProperty="#{bindings.EmployeeEOView2.hints.Lastname.name}"
+                                               sortable="false" id="c9">
+                                        <af:outputText value="#{row.Lastname}"
+                                                       shortDesc="#{bindings.EmployeeEOView2.hints.Lastname.tooltip}"
+                                                       id="ot9"/>
+                                    </af:column>
+                                    <af:column headerText="#{bindings.EmployeeEOView2.hints.Workdept.label}"
+                                               sortProperty="#{bindings.EmployeeEOView2.hints.Workdept.name}"
+                                               sortable="false" id="c10">
+                                        <af:outputText value="#{row.Workdept}"
+                                                       shortDesc="#{bindings.EmployeeEOView2.hints.Workdept.tooltip}"
+                                                       id="ot10"/>
+                                    </af:column>
+                                    <af:column headerText="#{bindings.EmployeeEOView2.hints.Phoneno.label}"
+                                               sortProperty="#{bindings.EmployeeEOView2.hints.Phoneno.name}"
+                                               sortable="false" id="c11">
+                                        <af:outputText value="#{row.Phoneno}"
+                                                       shortDesc="#{bindings.EmployeeEOView2.hints.Phoneno.tooltip}"
+                                                       id="ot11"/>
+                                    </af:column>
+                                    <af:column headerText="#{bindings.EmployeeEOView2.hints.Hiredate.label}"
+                                               sortProperty="#{bindings.EmployeeEOView2.hints.Hiredate.name}"
+                                               sortable="false" id="c12">
+                                        <af:outputText value="#{row.Hiredate}"
+                                                       shortDesc="#{bindings.EmployeeEOView2.hints.Hiredate.tooltip}"
+                                                       id="ot12">
+                                            <af:convertDateTime pattern="#{bindings.EmployeeEOView2.hints.Hiredate.format}"/>
+                                        </af:outputText>
+                                    </af:column>
+                                    <af:column headerText="#{bindings.EmployeeEOView2.hints.Job.label}"
+                                               sortProperty="#{bindings.EmployeeEOView2.hints.Job.name}"
+                                               sortable="false" id="c13">
+                                        <af:outputText value="#{row.Job}"
+                                                       shortDesc="#{bindings.EmployeeEOView2.hints.Job.tooltip}"
+                                                       id="ot13"/>
+                                    </af:column>
+                                    <af:column headerText="#{bindings.EmployeeEOView2.hints.Edlevel.label}"
+                                               sortProperty="#{bindings.EmployeeEOView2.hints.Edlevel.name}"
+                                               sortable="false" id="c14">
+                                        <af:outputText value="#{row.Edlevel}"
+                                                       shortDesc="#{bindings.EmployeeEOView2.hints.Edlevel.tooltip}"
+                                                       id="ot14">
+                                            <af:convertNumber groupingUsed="false"
+                                                              pattern="#{bindings.EmployeeEOView2.hints.Edlevel.format}"/>
+                                        </af:outputText>
+                                    </af:column>
+                                    <af:column headerText="#{bindings.EmployeeEOView2.hints.Sex.label}"
+                                               sortProperty="#{bindings.EmployeeEOView2.hints.Sex.name}"
+                                               sortable="false" id="c15">
+                                        <af:outputText value="#{row.Sex}"
+                                                       shortDesc="#{bindings.EmployeeEOView2.hints.Sex.tooltip}"
+                                                       id="ot15"/>
+                                    </af:column>
+                                    <af:column headerText="#{bindings.EmployeeEOView2.hints.Birthdate.label}"
+                                               sortProperty="#{bindings.EmployeeEOView2.hints.Birthdate.name}"
+                                               sortable="false" id="c16">
+                                        <af:outputText value="#{row.Birthdate}"
+                                                       shortDesc="#{bindings.EmployeeEOView2.hints.Birthdate.tooltip}"
+                                                       id="ot16">
+                                            <af:convertDateTime pattern="#{bindings.EmployeeEOView2.hints.Birthdate.format}"/>
+                                        </af:outputText>
+                                    </af:column>
+                                    <af:column headerText="#{bindings.EmployeeEOView2.hints.Salary.label}"
+                                               sortProperty="#{bindings.EmployeeEOView2.hints.Salary.name}"
+                                               sortable="false" id="c17">
+                                        <af:outputText value="#{row.Salary}"
+                                                       shortDesc="#{bindings.EmployeeEOView2.hints.Salary.tooltip}"
+                                                       id="ot17">
+                                            <af:convertNumber groupingUsed="false"
+                                                              pattern="#{bindings.EmployeeEOView2.hints.Salary.format}"/>
+                                        </af:outputText>
+                                    </af:column>
+                                    <af:column headerText="#{bindings.EmployeeEOView2.hints.Bonus.label}"
+                                               sortProperty="#{bindings.EmployeeEOView2.hints.Bonus.name}"
+                                               sortable="false" id="c18">
+                                        <af:outputText value="#{row.Bonus}"
+                                                       shortDesc="#{bindings.EmployeeEOView2.hints.Bonus.tooltip}"
+                                                       id="ot18">
+                                            <af:convertNumber groupingUsed="false"
+                                                              pattern="#{bindings.EmployeeEOView2.hints.Bonus.format}"/>
+                                        </af:outputText>
+                                    </af:column>
+                                    <af:column headerText="#{bindings.EmployeeEOView2.hints.Comm.label}"
+                                               sortProperty="#{bindings.EmployeeEOView2.hints.Comm.name}"
+                                               sortable="false" id="c19">
+                                        <af:outputText value="#{row.Comm}"
+                                                       shortDesc="#{bindings.EmployeeEOView2.hints.Comm.tooltip}"
+                                                       id="ot19">
+                                            <af:convertNumber groupingUsed="false"
+                                                              pattern="#{bindings.EmployeeEOView2.hints.Comm.format}"/>
+                                        </af:outputText>
+                                    </af:column>
+                                </af:table>
+                            </af:panelCollection>
+                        </af:panelHeader>
+                    </af:panelGroupLayout>
+                </f:facet>
+            </af:panelSplitter>
+        </af:form>
+    </af:document>
+</f:view>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.9.14" id="employeePageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="EmployeeEOView1" RangeSize="25" DataControl="AppModuleDataControl" id="EmployeeEOView1Iterator"/>
+    <searchRegion Binds="EmployeeEOView1Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="EmployeeEOView1Query"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="EmployeeEOView1Iterator" id="EmployeeEOView1">
+      <nodeDefinition DefName="model.EmployeeEOView" Name="EmployeeEOView10">
+        <AttrNames>
+          <Item Value="Empno"/>
+          <Item Value="Firstnme"/>
+          <Item Value="Midinit"/>
+          <Item Value="Lastname"/>
+          <Item Value="Workdept"/>
+          <Item Value="Phoneno"/>
+          <Item Value="Hiredate"/>
+          <Item Value="Job"/>
+          <Item Value="Edlevel"/>
+          <Item Value="Sex"/>
+          <Item Value="Birthdate"/>
+          <Item Value="Salary"/>
+          <Item Value="Bonus"/>
+          <Item Value="Comm"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <view id="index">
+    <page>/index.jsf</page>
+  </view>
+  <view id="employee">
+    <page>/employee.jsf</page>
+  </view>
+  <view id="edit">
+    <page>/edit.jsf</page>
+  </view>
+  <view id="graph">
+    <page>/graph.jsf</page>
+  </view>
+  <view id="departament">
+    <page>/departament.jsf</page>
+  </view>
+  <control-flow-rule id="__1">
+    <from-activity-id>index</from-activity-id>
+    <control-flow-case id="__2">
+      <from-outcome>list</from-outcome>
+      <to-activity-id>employee</to-activity-id>
+    </control-flow-case>
+  </control-flow-rule>
+  <control-flow-rule id="__3">
+    <from-activity-id>employee</from-activity-id>
+    <control-flow-case id="__4">
+      <from-outcome>volver</from-outcome>
+      <to-activity-id>index</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__5">
+      <from-outcome>edit</from-outcome>
+      <to-activity-id>edit</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__8">
+      <from-outcome>graph</from-outcome>
+      <to-activity-id>graph</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__11">
+      <from-outcome>departament</from-outcome>
+      <to-activity-id>departament</to-activity-id>
+    </control-flow-case>
+  </control-flow-rule>
+  <control-flow-rule id="__6">
+    <from-activity-id>edit</from-activity-id>
+    <control-flow-case id="__7">
+      <from-outcome>volver</from-outcome>
+      <to-activity-id>employee</to-activity-id>
+    </control-flow-case>
+  </control-flow-rule>
+  <control-flow-rule id="__9">
+    <from-activity-id>graph</from-activity-id>
+    <control-flow-case id="__10">
+      <from-outcome>volver</from-outcome>
+      <to-activity-id>employee</to-activity-id>
+    </control-flow-case>
+  </control-flow-rule>
+  <control-flow-rule id="__12">
+    <from-activity-id>departament</from-activity-id>
+    <control-flow-case id="__13">
+      <from-outcome>volver</from-outcome>
+      <to-activity-id>employee</to-activity-id>
+    </control-flow-case>
+  </control-flow-rule>
+</adfc-config>
